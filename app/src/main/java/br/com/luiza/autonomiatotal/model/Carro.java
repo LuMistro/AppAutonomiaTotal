@@ -1,29 +1,27 @@
 package br.com.luiza.autonomiatotal.model;
 
 public class Carro {
-    private Integer id;
+
     private String nome;
     private Double kmPercorrido;
-    private Double qtdGasolina;
-    private Double autonomia;
+    private Double combustivelUsado;
+    private Double consumoMedio;
+
 
     public Carro() {
     }
 
-    public Carro(Integer id, String nome, Double kmPercorrido, Double qtdGasolina, Double autonomia) {
-        this.id = id;
+    public Carro(String nome, Double kmPercorrido, Double combustivelUsado) {
         this.nome = nome;
         this.kmPercorrido = kmPercorrido;
-        this.qtdGasolina = qtdGasolina;
-        this.autonomia = autonomia;
+        this.combustivelUsado = combustivelUsado;
     }
 
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
+    public Carro(String nome, Double kmPercorrido, Double combustivelUsado, Double consumoMedio) {
+        this.nome = nome;
+        this.kmPercorrido = kmPercorrido;
+        this.combustivelUsado = combustivelUsado;
+        this.consumoMedio = consumoMedio;
     }
 
     public String getNome() {
@@ -42,19 +40,19 @@ public class Carro {
         this.kmPercorrido = kmPercorrido;
     }
 
-    public Double getQtdGasolina() {
-        return qtdGasolina;
+    public Double getCombustivelUsado() {
+        return combustivelUsado;
     }
 
-    public void setQtdGasolina(Double qtdGasolina) {
-        this.qtdGasolina = qtdGasolina;
+    public void setCombustivelUsado(Double combustivelUsado) {
+        this.combustivelUsado = combustivelUsado;
     }
 
-    public Double getAutonomia() {
-        return autonomia;
+    public Double getConsumoMedio() {
+        return consumoMedio;
     }
 
-    public void setAutonomia(Double autonomia) {
-        this.autonomia = autonomia;
+    public void setConsumoMedio(Double consumoMedio) {
+        this.consumoMedio = consumoMedio;
     }
 }

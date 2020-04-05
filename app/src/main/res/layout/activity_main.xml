@@ -1,78 +1,114 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="15dp"
     android:orientation="vertical"
+    android:padding="16dp"
     tools:context=".view.MainActivity">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:text="@string/nome_carro" />
+        android:text="@string/carro_nome"
+        android:textSize="18sp" />
+
 
     <EditText
-        android:id="@+id/etNomeCarro"
+        android:id="@+id/edtNomeCarro"
+        style="@style/Widget.AppCompat.EditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/nome_carro_hint" />
+        android:hint="@string/nome_carro_hint"
+        android:padding="10dp" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:text="@string/km_percorridos" />
+        android:layout_marginTop="16dp"
+        android:text="@string/km_percorrido"
+        android:textSize="18sp" />
 
     <EditText
-        android:id="@+id/etKmPercorrido"
+        android:id="@+id/edtKmPercorrida"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/km_percorridos_hint" />
+        android:hint="@string/km_percorrido_hint"
+        android:inputType="numberDecimal"
+        android:padding="10dp" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:text="@string/quantidade_combustivel" />
+        android:layout_marginTop="16dp"
+        android:text="@string/qtd_combustivel"
+        android:textSize="18sp" />
 
     <EditText
-        android:id="@+id/etCombustivelGasto"
+        android:id="@+id/edtQtdCombustivel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/quantidade_combustivel_hint" />
+        android:hint="@string/qtd_combustivel_hint"
+        android:inputType="numberDecimal"
+        android:padding="10dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="20dp"
         android:orientation="horizontal">
 
         <Button
-            android:layout_width="match_parent"
+            android:id="@+id/btnCalcular"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/calcular"/>
+            android:onClick="calcular"
+            android:text="@string/calcular" />
+
         <Button
-            android:layout_width="match_parent"
+            android:id="@+id/btnLimparDados"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
             android:layout_weight="1"
-            android:text="@string/limpa_dados"/>
-    </LinearLayout>
-
-    <LinearLayout android:id="@+id/layoutResultado"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
+            android:onClick="limparDados"
+            android:text="@string/limparDados" />
 
     </LinearLayout>
-    <TextView
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="@string/consumo_medio"/>
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="@string/consumo_medio_frota"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvConsumoMedioFrota"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+
 
 </LinearLayout>
